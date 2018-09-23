@@ -13,6 +13,8 @@
 		AD18A84821285CB000F6BF05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD18A84621285CB000F6BF05 /* LaunchScreen.storyboard */; };
 		AD18A85021285D4800F6BF05 /* QuoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18A84F21285D4800F6BF05 /* QuoteTableViewController.swift */; };
 		AD18A8532128604C00F6BF05 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD18A8512128604B00F6BF05 /* README.md */; };
+		DA07378D21567FBD00FFFB1F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA07378C21567FBD00FFFB1F /* StoreKit.framework */; };
+		DADCB1FE2157C22800E058A8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DADCB1FD2157C22800E058A8 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		AD18A84921285CB000F6BF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD18A84F21285D4800F6BF05 /* QuoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewController.swift; sourceTree = "<group>"; };
 		AD18A8512128604B00F6BF05 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DA07378C21567FBD00FFFB1F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DADCB1FD2157C22800E058A8 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA07378D21567FBD00FFFB1F /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,9 +45,11 @@
 		AD18A83121285CAF00F6BF05 = {
 			isa = PBXGroup;
 			children = (
+				DADCB1FD2157C22800E058A8 /* .gitignore */,
 				AD18A8512128604B00F6BF05 /* README.md */,
 				AD18A83C21285CAF00F6BF05 /* InspoQuotes */,
 				AD18A83B21285CAF00F6BF05 /* Products */,
+				DA07378B21567FBD00FFFB1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +82,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DA07378B21567FBD00FFFB1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA07378C21567FBD00FFFB1F /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,14 +118,19 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = "London App Brewery";
+				ORGANIZATIONNAME = "Paul-Kang";
 				TargetAttributes = {
 					AD18A83921285CAF00F6BF05 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
-			buildConfigurationList = AD18A83521285CAF00F6BF05 /* Build configuration list for PBXProject "InspoQuotes" */;
+			buildConfigurationList = AD18A83521285CAF00F6BF05 /* Build configuration list for PBXProject "PKInspoQuotes" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -133,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DADCB1FE2157C22800E058A8 /* .gitignore in Resources */,
 				AD18A84821285CB000F6BF05 /* LaunchScreen.storyboard in Resources */,
 				AD18A84521285CB000F6BF05 /* Assets.xcassets in Resources */,
 				AD18A8532128604C00F6BF05 /* README.md in Resources */,
@@ -295,13 +316,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3ECFYJZ64T;
+				DEVELOPMENT_TEAM = 64V6DWS7WT;
 				INFOPLIST_FILE = InspoQuotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.londonappbrewery.InspoQuotes;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paul-kang.PKInspoQuotes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -313,13 +335,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3ECFYJZ64T;
+				DEVELOPMENT_TEAM = 64V6DWS7WT;
 				INFOPLIST_FILE = InspoQuotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.londonappbrewery.InspoQuotes;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paul-kang.PKInspoQuotes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -329,7 +352,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AD18A83521285CAF00F6BF05 /* Build configuration list for PBXProject "InspoQuotes" */ = {
+		AD18A83521285CAF00F6BF05 /* Build configuration list for PBXProject "PKInspoQuotes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD18A84A21285CB000F6BF05 /* Debug */,
